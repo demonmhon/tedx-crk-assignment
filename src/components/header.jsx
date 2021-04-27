@@ -32,10 +32,16 @@ const Header = (props) => {
       </span>
       <ul>
         <li className={pathname === '/' ? 'active' : null}>
-          <Link to="/">Home</Link>
+          <Link to="/">Find A Match</Link>
+        </li>
+        <li className={pathname === '/dogs-personalities' ? 'active' : null}>
+          <Link to="/dogs-personalities">Dog's Personalities</Link>
         </li>
         <li className={pathname === '/about' ? 'active' : null}>
-          <Link to="/about">About</Link>
+          <Link to="/about">About Us</Link>
+        </li>
+        <li className={pathname === '/contact' ? 'active' : null}>
+          <Link to="/contact">Contact Us</Link>
         </li>
       </ul>
     </header>

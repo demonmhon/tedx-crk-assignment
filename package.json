@@ -10,7 +10,6 @@
   "main": "index.js",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --config=config/webpack.prod.js",
-    "build:docker": "docker build . -t react-16x-stater",
     "build:serve": "npm run build && npm run serve",
     "lint": "stylelint \"src/**/*.scss\"",
     "prettier": "prettier --check \"src/**/*.js\"  --check \"src/**/*.jsx\"",
@@ -18,7 +17,6 @@
     "lint:fix": "stylelint \"src/**/*.scss\" --fix",
     "start": "node server.js",
     "start:dev": "cross-env NODE_ENV=development webpack serve --config=config/webpack.dev.js",
-    "start:docker": "docker run -d -p 3000:80 react-16x-stater",
     "analyze": "webpack --config=config/webpack.prod.js --profile --json > webpack-bundle-analyzer/stats.json && webpack-bundle-analyzer webpack-bundle-analyzer/stats.json",
     "pretest": "npm run lint",
     "test": "jest",
@@ -40,6 +38,7 @@
     "babel-eslint": "^10.1.0",
     "babel-jest": "^26.6.3",
     "babel-loader": "^8.2.2",
+    "bootstrap": "^4.6.0",
     "clean-webpack-plugin": "^3.0.0",
     "copy-webpack-plugin": "^7.0.0",
     "cross-env": "^7.0.3",
@@ -52,6 +51,7 @@
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-react": "^7.22.0",
     "file-loader": "^6.2.0",
+    "hamburgers": "^1.1.3",
     "html-webpack-plugin": "^5.2.0",
     "jest": "^26.6.3",
     "mini-css-extract-plugin": "^1.3.9",
@@ -75,6 +75,7 @@
     "stylelint": "^13.11.0",
     "stylelint-config-rational-order": "^0.1.2",
     "stylelint-order": "^4.1.0",
+    "swiper": "^6.5.8",
     "url-loader": "^4.1.1",
     "webpack": "^5.24.2",
     "webpack-bundle-analyzer": "^4.4.0",
@@ -82,8 +83,5 @@
     "webpack-dev-server": "^3.11.2",
     "webpack-merge": "^5.7.3",
     "workbox-webpack-plugin": "^6.1.1"
-  },
-  "dependencies": {
-    "express": "^4.17.1"
   }
 }
