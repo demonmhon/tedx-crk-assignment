@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router';
 
 import { APP } from 'core/constants';
-import logo from 'assets/logo.png';
+import logoUrl from '../assets/logo.svg';
 
 const propTypes = {
   match: PropTypes.object.isRequired,
@@ -18,8 +18,9 @@ const defaultProps = {
   history: {},
 };
 
+const ns = APP.NAMESPACE;
+
 const Header = (props) => {
-  const ns = APP.NAMESPACE;
   const { location } = props;
   const { pathname } = location;
 
@@ -27,7 +28,7 @@ const Header = (props) => {
     <header className={`${ns}__header`}>
       <span className={`${ns}__header__logo`}>
         <Link to="/">
-          <img src={logo} alt="logo" />
+          <img src={logoUrl} alt="logo" />
         </Link>
       </span>
       <ul>
