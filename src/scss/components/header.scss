@@ -11,6 +11,9 @@
       0 0px 10px rgba(0, 0, 0, 0.035),
       0 0px 24.1px rgba(0, 0, 0, 0.046),
       0 0px 80px rgba(0, 0, 0, 0.07);
+    position: sticky;
+    top: 0;
+    z-index: 3;
 
     @include media-breakpoint-up(sm) {
       padding: 15px 30px;

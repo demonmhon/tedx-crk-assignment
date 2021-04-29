@@ -2,6 +2,7 @@ import React from 'react';
 
 import { APP } from 'core/constants';
 import heroImg from 'assets/hero.png';
+import Slide from './home/slide'
 
 const propTypes = {};
 
@@ -41,11 +42,19 @@ const Banner = () => {
   );
 };
 
-const DogTypes = () => {
+const Content = () => {
   return (
-    <div className="container">
-      <div className="row">
-        <div className="col"></div>
+    <div className={`${ns}-page ${ns}-page--home__content`}>
+      <div className="container">
+        <div className="title">
+          <h2 className="title-text">
+            Dog have these 5 major personality steps.
+          </h2>
+        </div>
+        <Slide />
+        <a href="/" className="btn btn--more">
+          Learn more
+        </a>
       </div>
     </div>
   );
@@ -54,7 +63,7 @@ function HomePage(props) {
   return (
     <div className={`${ns}-page--home`}>
       <Banner />
-      <DogTypes />
+      <Content />
     </div>
   );
 }
